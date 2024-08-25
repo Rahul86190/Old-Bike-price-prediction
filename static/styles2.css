@@ -1,0 +1,275 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ececec; /* Updated background color */
+    color: #333;
+}
+
+/* Styling for the page header */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Styling for the paragraph */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #270707;
+    margin: 0 20px 30px;
+}
+
+/* Style for Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.action-buttons .home-button,
+.action-buttons .prediction-button
+.action-buttons .Rate_us-button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.action-buttons .home-button:hover,
+.action-buttons .prediction-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Introduction section styling */
+.intro {
+    padding: 50px;
+    background: linear-gradient(to right, #ff6f61, #d63f8c); /* Updated gradient */
+    color: white;
+    text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding: 14px 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Bike Details Section */
+.bike-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9; /* Updated background color */
+    gap: 20px; /* Space between columns */
+}
+
+/* Styling for bike slider */
+.bike-slider {
+    flex: 1;
+    position: relative;
+}
+
+/* Styling for individual bike slide */
+.bike-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%; /* Full width of container */
+    max-width: 600px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    overflow: hidden;
+    margin-bottom: 20px; /* Space below box */
+    transition: transform 0.5s ease;
+}
+
+.bike-slide:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Styling for bike name bar */
+.bike-name-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+}
+
+/* Styling for bike names */
+.bike-name {
+    font-size: 2em; /* Larger font size */
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Styling for bike images */
+.bike-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the box while preserving aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Initially hide all images */
+}
+
+.bike-image.active {
+    opacity: 1; /* Show active image */
+}
+
+/* Styling for navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover effects for navigation buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Bike summary section styling */
+.bike-summary {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bike-summary h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.bike-summary p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Privacy Policy Section Styling */
+.privacy-policy {
+    padding: 20px;
+    background-color: #2c3e50; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+/* Privacy Policy heading styling */
+.privacy-policy h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Privacy Policy paragraph styling */
+.privacy-policy p {
+    font-size: 1em;
+}
+
+/* General styling */
+button {
+    background-color: #2c3e50; /* Button background color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #34495e; /* Darker button color on hover */
+}
+
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button 30px from the bottom */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Dark background */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#backToTop:hover {
+    background-color: #0a3feb; /* Add a dark-grey background on hover */
+}
+

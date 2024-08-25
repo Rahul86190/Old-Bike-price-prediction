@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://cdn.wallpapersafari.com/43/42/IwWBH3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.nav-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    margin: 0 15px;
+    background: linear-gradient(45deg, #FF6347, #FF4500);
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(45deg, #FF4500, #FF6347);
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 80px; /* Space for navbar */
+    text-align: center;
+    position: relative;
+    padding-bottom: 150px; /* Space for footer */
+}
+
+/* Motto Section */
+.motto {
+    margin: 60px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.motto h2 {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.motto p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Rating Form */
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.rating-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #FF6347;
+    margin-bottom: 20px;
+}
+
+.rating-form .form-group {
+    margin-bottom: 20px;
+}
+
+.rating-form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.rating-form input[type="text"],
+.rating-form input[type="email"],
+.rating-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating-form textarea {
+    resize: vertical;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Star Rating Styles */
+.star-rating .star {
+    font-size: 2.5em;
+    color: #ca0ef4; /* Default border color */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+/* Hover Effect */
+.star-rating .star.hovered {
+    color: #FFD700; /* Yellow for hover effect */
+}
+
+/* Selected Stars */
+.star-rating .star.selected {
+    color: #FFD700; /* Yellow for selected stars */
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #FF6347, #FF4500);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #FF4500, #FF6347);
+    transform: scale(1.05);
+}
+
+/* Thank You Message */
+.thank-you {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #FFD700;
+    font-size: 1.5em;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Fantastic Section */
+.fantastic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #FFD700;
+    font-size: 2em;
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.privacy-policy {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.privacy-policy:hover {
+    text-decoration: underline;
+}
