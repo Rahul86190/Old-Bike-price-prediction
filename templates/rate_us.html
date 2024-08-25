@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us - Old Bike Price Prediction</title>
+    <link rel="stylesheet" href="static/rate_us.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/type_of_bikes" class="nav-btn">Types of Bikes</a>
+        <a href="/predict" class="nav-btn">Start Prediction</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Motto Section -->
+        <section class="motto">
+            <h2>We Appreciate Your Feedback! 🌟</h2>
+            <p>Your feedback is valuable to us. Please rate our Old Bike Price Prediction model and help us improve!</p>
+        </section>
+
+        <!-- Rating Form -->
+        <div class="rating-container">
+            <div class="rating-card">
+                <h1 class="title">Rate Us</h1>
+                <form class="rating-form" action="#" method="POST" onsubmit="handleSubmit(); return false;">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback">Feedback:</label>
+                        <textarea id="feedback" name="feedback" rows="4" placeholder="Your comments here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating:</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" class="star-input"><label for="star5" class="star">&#9734;</label>
+                            <input type="radio" id="star4" name="rating" value="4" class="star-input"><label for="star4" class="star">&#9734;</label>
+                            <input type="radio" id="star3" name="rating" value="3" class="star-input"><label for="star3" class="star">&#9734;</label>
+                            <input type="radio" id="star2" name="rating" value="2" class="star-input"><label for="star2" class="star">&#9734;</label>
+                            <input type="radio" id="star1" name="rating" value="1" class="star-input"><label for="star1" class="star">&#9734;</label>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Rating</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Thank You Message -->
+        <div id="thank-you" class="thank-you">
+            Thank you for your feedback! 😊
+        </div>
+
+        <!-- Fantastic Section -->
+        <section id="fantastic-section" class="fantastic-section">
+            <h2>Fantastic! 🎉</h2>
+            <p>We are thrilled to have your feedback. Stay tuned for more amazing updates!</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Have a fantastic day! 🌟</p>
+        <a href="Bikes prediction.com" class="privacy-policy">@ BIKE PREDICTION Privacy Policy reserved </a>
+    </footer>
+
+    <script>
+        function handleSubmit() {
+            // Scroll down to the bottom of the page
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+            // Display thank you message, fantastic section, and footer
+            setTimeout(() => {
+                document.getElementById('thank-you').style.opacity = 1;
+                document.getElementById('thank-you').style.visibility = 'visible';
+
+                document.getElementById('fantastic-section').style.opacity = 1;
+                document.getElementById('fantastic-section').style.visibility = 'visible';
+
+                document.querySelector('.footer').style.opacity = 1;
+                document.querySelector('.footer').style.visibility = 'visible';
+            }, 500); // Delay to allow for scroll animation
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star');
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', function() {
+            const ratingValue = this.getAttribute('for').replace('star', '');
+            stars.forEach(s => {
+                if (s.getAttribute('for').replace('star', '') >= ratingValue) {
+                    s.classList.add('hovered');
+                } else {
+                    s.classList.remove('hovered');
+                }
+            });
+        });
+
+        star.addEventListener('mouseout', function() {
+            stars.forEach(s => s.classList.remove('hovered'));
+            const checkedStar = document.querySelector('.star-input:checked + .star');
+            if (checkedStar) {
+                const ratingValue = checkedStar.getAttribute('for').replace('star', '');
+                stars.forEach(s => {
+                    if (s.getAttribute('for').replace('star', '') >= ratingValue) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            }
+        });
+
+        star.addEventListener('click', function() {
+            const ratingValue = this.getAttribute('for').replace('star', '');
+            document.querySelector(`input[value="${ratingValue}"]`).checked = true;
+            stars.forEach(s => {
+                if (s.getAttribute('for').replace('star', '') >= ratingValue) {
+                    s.classList.add('selected');
+                } else {
+                    s.classList.remove('selected');
+                }
+            });
+        });
+    });
+});
+
+
+        
+
+        // Initially hide fantastic section and footer
+        document.getElementById('fantastic-section').style.opacity = 0;
+        document.getElementById('fantastic-section').style.visibility = 'hidden';
+
+        document.querySelector('.footer').style.opacity = 0;
+        document.querySelector('.footer').style.visibility = 'hidden';
+    </script>
+</body>
+</html>

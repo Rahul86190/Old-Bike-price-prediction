@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Price Prediction</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0d3b66, #faa307);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            line-height: 1.2;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .hero p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #e63946, #f77f00, #e63946);
+            background-clip: linear-gradient(90deg, #e63946, #f77f00, #e63946);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textSlide 5s infinite linear;
+        }
+
+        .bike-gallery {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 10px;
+            position: relative;
+            height: 850px; /* Adjusted height to accommodate larger bikes */
+        }
+
+        .bike-gallery .bike {
+            width: 650px;
+            height: 650px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bike-gallery .bike img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .bike-gallery .bike img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .horizontal-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: bold;
+            color: #ffffff;
+            writing-mode: horizontal-tb;
+            text-align: center;
+        }
+
+        .search-button {
+            display: block;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #e63946;
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.4s ease, background 0.3s ease;
+        }
+
+        .search-button:hover {
+            transform: scale(1.1);
+            background: #f77f00;
+        }
+
+        .bike-details {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .bike-details h2 {
+            margin-bottom: 20px;
+            font-size: 40px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .bike-details p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            animation: slideUp 1.5s ease-in-out forwards;
+        }
+
+        .footer {
+            background: #1d3557;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes textSlide {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>BIKE YOU WANT ... BIKE YOU GET</h1>
+    <p>WANT A PARTNER TO TRAVEL? HERE YOU MET.</p>
+</div>
+
+<div class="bike-gallery">
+    <div class="bike">
+        <img src="static/bike1.jpg" alt="Bike 1">
+    </div>
+    <div class="horizontal-text">
+        YOUR<br>PASSION<br><br><br>
+        YOUR<br>PRIDE<br><br><br>
+        YOUR<br>LUCK<br><br><br>
+        YOUR<br>DELIGHT
+    </div>
+    <div class="bike">
+        <img src="static/bike2.jpg" alt="Bike 2">
+    </div>
+</div>
+
+<a href="/predict" class="search-button">Find My Bike!</a>
+
+<div class="bike-gallery">
+    <div class="bike">
+        <img src="static/bike3.jpg" alt="Bike 3">
+    </div>
+    <div class="horizontal-text">
+        KEEP<br>SAFE<br><br><br>
+        CHECK<br>PRICE<br><br><br>
+        YOUR<br>BIKE<br><br><br>
+        YOUR<br>RIDE
+    </div>
+    <div class="bike">
+        <img src="static/bike4.jpg" alt="Bike 4">
+    </div>
+</div>
+
+<div class="bike-details">
+    <h2>Why Choose Us?</h2>
+    <p>We offer a wide range of bikes to suit every need and budget.</p>
+    <p>Our platform is designed to help you find the perfect bike, whether for city commuting or off-road adventures.</p>
+    <p>With detailed information and advanced search capabilities, finding your dream bike has never been easier.</p>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Bike Price Prediction. All rights reserved. | <a href="/privacy-policy" style="color:#f1faee;">Privacy Policy</a></p>
+</div>
+
+</body>
+</html>

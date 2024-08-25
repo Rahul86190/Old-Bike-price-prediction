@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Old Bike Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/type_of_bikes">Types of Bikes</a></li>
+            <li><a href="/rate_us">Rate Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Prediction Result Section -->
+    <div class="result-container">
+        <div class="prediction-box">
+            <h1 class="title">Old Bike Price Prediction</h1>
+            <div class="prediction-amount">₹{{ prediction }}</div>
+
+            <div class="user-data">
+                <h3>Your Submitted Data:</h3><br>
+                <ul>
+                    <li><strong>Type of Bike:</strong> {{ bike_type }}</li>
+                    <li><strong>Owner:</strong> {{ owner }}</li>
+                    <li><strong>Kilometers Driven:</strong> {{ kilometers_driven }} km</li>
+                    <li><strong>Years Used:</strong> {{ years_used }} years</li>
+                    <li><strong>Power:</strong> {{ power }} CC</li>
+                </ul>
+            </div>
+            
+            <a href="/predict" class="back-button">Check Another Bike</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

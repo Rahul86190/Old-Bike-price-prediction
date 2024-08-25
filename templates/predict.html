@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Bike Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/type_of_bikes">Types of Bikes</a></li>
+            <li><a href="/rate_us">Rate Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h1>Old Bike Price Prediction</h1>
+        <form action="{{ url_for('data') }}" method="POST">
+            <label for="bike_type">Type of Bike</label>
+            <select id="bike_type" name="bike_type" required>
+                <option value="2" >Royal Enfield</option>
+                                  <option value="7">KTM</option>
+                                  <option value="1">Bajaj</option>
+                                  <option value="9">Harley-Davidson</option>
+                                  <option value="5">Yamaha</option>
+                                  <option value="4">Honda</option>
+                                  <option value="8">Suzuki</option>
+                                  <option value="6">TVS</option>
+                                  <option value="10">Kawasaki</option>
+                                  <option value="11">Hyosung</option>
+                                  <option value="13">Benelli</option>
+                                  <option value="12">Mahindra</option>
+                                  <option value="14">Triumph</option>
+                                  <option value="15">Ducati</option>
+                                  <option value="16">BMW</option>
+                <!-- Add other options here -->
+            </select>
+
+            <label for="owner">Owner</label>
+            <input type="number" id="owner" name="owner" min="1" max="10" required>
+
+            <label for="kilometers_driven">Kilometers Driven</label>
+            <input type="number" id="kilometers_driven" name="kilometers_driven" required>
+
+            <label for="years_used">Years Used</label>
+            <input type="number" id="years_used" name="years_used" required>
+
+            <label for="power">Power (CC)</label>
+            <input type="number" id="power" name="power" required>
+
+            <button type="submit" class="predict-button">Predict Price</button>
+        </form>
+    </div>
+
+     <!-- Additional Sections -->
+     <section class="info-sections">
+        <div class="info-box" id="operation">
+            <h2>How We Predict the Price</h2>
+            <p>We use advanced algorithms and historical data to analyze various factors like bike type, How old is bike , mileage, and condition. Our model provides price predictions based on these inputs.</p>
+        </div>
+        <div class="info-box" id="types">
+            <h2>Types of Bikes</h2>
+            <p>We offer predictions for a wide range of bike types, including Royal Enfield, KTM, Bajaj, and more. Each bike type has specific parameters that influence its resale value. Check form button TYPES OF BIKE...</p>
+        </div>
+        <div class="info-box" id="about">
+            <h2>About Us</h2>
+            <p>Our team is dedicated to providing reliable price predictions and insights for used bikes. We are passionate about helping buyers and sellers make informed decisions.</p>
+        </div>
+        <div class="info-box" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help and provide support.</p>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
